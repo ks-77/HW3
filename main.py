@@ -48,6 +48,31 @@ try:
 
 except ValueError as e:
     print("Enter only integer numbers")
-    print(f"Error {e}")
+    print(f"Error: {e}")
 except Exception as e:
-    print(f"Error {e}")
+    print(f"Error: {e}")
+
+# 3
+
+try:
+    a = float(input('write first number: '))
+    b = float(input('write second number: '))
+    operation = input('what to do? (+, -, *, /): ')
+    match operation:
+        case '+':
+            print(a + b)
+        case '-':
+            print(a - b)
+        case '*':
+            print(a * b)
+        case '/':
+            print(a / b)
+
+except ValueError as e:
+    print("Enter only integer numbers")
+    print(f"Error: {e}")
+except ZeroDivisionError as e:
+    print("you can't divide by 0")
+    print(f"Error: {e}")
+except Exception as e:
+    print(f"Error: {e}")
